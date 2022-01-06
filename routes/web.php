@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [App\Http\Controllers\WelcomeController::class ,'index'])->name('welcome');
+Route::get('/article', [App\Http\Controllers\WelcomeController::class ,'show'])->name('article');
 Route::get('/about', [App\Http\Controllers\AboutController::class ,'about'])->name('about');
 Route::get('/contact', [App\Http\Controllers\ContactController::class ,'contact'])->name('contact');
 Route::get('/post', [App\Http\Controllers\PostController::class ,'post'])->name('post');

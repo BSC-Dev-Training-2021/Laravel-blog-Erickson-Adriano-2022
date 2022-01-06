@@ -10,4 +10,8 @@ class WelcomeController extends Controller
 
    	return view('welcome');
    }
+    public function show(){
+
+   	return view('article');
+   }
 }
