@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                    <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+                    <p class="lead mb-0">this is may first laravel blog post</p>
                 </div>
             </div>
         </header>
@@ -22,7 +22,7 @@
                             <div class="small text-muted">January 1, 2021</div>
                             <h2 class="card-title">Featured Post Title</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                            <a class="btn btn-primary" href="{{route('article')}}">Read more →</a>
+                            <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -35,7 +35,7 @@
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="{{route('article')}}">Read more →</a>
+                                    <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
@@ -45,7 +45,7 @@
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="{{route('article')}}">Read more →</a>
+                                    <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="{{route('article')}}">Read more →</a>
+                                    <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
@@ -67,7 +67,7 @@
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="{{route('article')}}">Read more →</a>
+                                    <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
                                 </div>
                             </div>
                         </div>

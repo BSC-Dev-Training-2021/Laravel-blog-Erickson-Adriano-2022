@@ -11,11 +11,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [App\Http\Controllers\WelcomeController::class ,'index'])->name('welcome');
-Route::get('/article', [App\Http\Controllers\WelcomeController::class ,'show'])->name('article');
-Route::get('/about', [App\Http\Controllers\AboutController::class ,'about'])->name('about');
-Route::get('/contact', [App\Http\Controllers\ContactController::class ,'contact'])->name('contact');
-Route::get('/post', [App\Http\Controllers\PostController::class ,'post'])->name('post');
+Route::get('/', [App\Http\Controllers\WelcomeController::class ,'index'])->name('welcome.index');
+Route::get('/article', [App\Http\Controllers\WelcomeController::class ,'show'])->name('article.show');
+Route::get('/about', [App\Http\Controllers\AboutController::class ,'index'])->name('about.index');
+Route::get('/contact', [App\Http\Controllers\ContactController::class ,'index'])->name('contact.index');
+Route::get('/post', [App\Http\Controllers\PostController::class ,'index'])->name('post.index');
+Route::get('/messages', [App\Http\Controllers\MessagesController::class ,'index'])->name('messages.index');
 // Route::get('/', function () {
 //     return view('welcome');
 // });

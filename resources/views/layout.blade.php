@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>My Blog - Home</title>
-        <script src="/js/jquery-3.6.0.min.js"></script>
+        <title>EA-Blog</title>
+        <script src="/js/jquery-3.6.0.min.js"></script>9
         <script src="/js/app.js"></script>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -18,15 +18,25 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="{{url('/')}}">My Blog</a>
+                <a class="navbar-brand" href="{{route('welcome.index')}}">EA-Blog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('about')}}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('contact')}}">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('post')}}">Post</a></li>
-                        <li class="nav-item"><a class="nav-link" href="messages.html"><i class="fa fa-envelope-o"></i></a></li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('welcome.index') ? 'active' : ''}}" href="{{route('welcome.index')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('about.index') ? 'active' : ''}}" href="{{route('about.index')}}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('contact.index') ? 'active' : ''}}" href="{{route('contact.index')}}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('post.index') ? 'active' : ''}}" href="{{route('post.index')}}">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('messages.index') ? 'active' : ''}}" href="{{route('messages.index')}}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
