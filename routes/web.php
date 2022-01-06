@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,16 +11,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('about', function () {
-    return view('about');
-});
-Route::get('contact', function () {
-    return view('contact');
-});
-Route::get('post', function () {
-    return view('post');
-});
+Route::get('/', [App\Http\Controllers\WelcomeController::class ,'index'])->name('welcome');
+Route::get('/about', [App\Http\Controllers\AboutController::class ,'about'])->name('about');
+Route::get('/contact', [App\Http\Controllers\ContactController::class ,'contact'])->name('contact');
+Route::get('/post', [App\Http\Controllers\PostController::class ,'post'])->name('post');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('about', function () {
+//     return view('about');
+// });
+// Route::get('contact', function () {
+//     return view('contact');
+// });
+// Route::get('post', function () {
+//     return view('post');
+// });
