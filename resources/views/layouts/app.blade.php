@@ -39,7 +39,7 @@
                     <ul class="navbar-nav me-auto">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link {{Request::routeIs('home') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
+                            <a class="nav-link {{Request::routeIs('home') ? 'active' : ''}}" href="{{route('home.index')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{Request::routeIs('about.index') ? 'active' : ''}}" href="{{route('about.index')}}">About</a>
