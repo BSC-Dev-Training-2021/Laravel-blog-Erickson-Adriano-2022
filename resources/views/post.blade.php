@@ -113,7 +113,14 @@
                                         <li><a href="#!">Tutorials</a></li>
                                     </ul>
                                 </div>
+                                <br>
                             </div>
+                            <form action="/c" method="post" enctype="multipart/form-data">
+                                @csrf
+                                    <label>addCategory</label>
+                                    <input type="text" name="category" class="form-control" placeholder="enter name of category">
+                                    <button type="submit" class="btn btn-primary">ADD</button>
+                                </form>
                         </div>
                     </div>
                     <!-- Side widget-->

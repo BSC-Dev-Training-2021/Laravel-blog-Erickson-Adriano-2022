@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,9 @@ use App\Http\Controllers\BlogController;
 
 Auth::routes();
 Route::post('/p',[App\Http\Controllers\PostsController::class, 'store']);
+Route::post('/c',[BlogCategoryController::class, 'add']);
 
-Route::get('/h', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/', [App\Http\Controllers\WelcomeController::class ,'index'])->name('welcome.index');
 Route::get('/article', [App\Http\Controllers\WelcomeController::class ,'show'])->name('article.show');
 Route::get('/about', [App\Http\Controllers\AboutController::class ,'index'])->name('about.index');
@@ -31,5 +33,6 @@ Route::get('/post', [App\Http\Controllers\PostsController::class ,'index'])->nam
 
 //for message
 Route::get('/messages', [App\Http\Controllers\MessagesController::class ,'index'])->name('messages.index');
-Route::get('/home',[BlogController::class ,'show']);
+Route::get('/home',[BlogController::class ,'show'])->name('home.index');
+//Route::get('/home',[BlogCategoryController::class ,'show'])->name('home.index');
 

@@ -22,7 +22,7 @@ class PostsController extends Controller
     	]);
 
     	Post::create($request->all());
-    	return redirect()->route('home')->with('success','post successfull.');
+    	return redirect()->route('post.index')->with('success','post successfull.');
     	//dd(request()->all());
     }
     
