@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('content')
         <!-- Page content-->
         <div class="container mt-5">
@@ -15,37 +15,38 @@
                             </header>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <form>
+                                <form method="post" action="/p" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1" class="mb-1">Title</label>
-                                        <input type="text" class="form-control mb-1">
+                                        <input type="text" name="title" class="form-control mb-1">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1" class="mb-1">Description</label>
-                                        <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <textarea class="form-control mb-1" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1" class="mb-1">Content</label>
-                                        <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        <textarea class="form-control mb-1" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label class="mb-1 mt-3">Categories</label>
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" name="1" type="checkbox" value="1" id="defaultCheck1">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                       Default checkbox
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                                    <input class="form-check-input" name="2" type="checkbox" value="2" id="defaultCheck2">
                                                     <label class="form-check-label" for="defaultCheck2">
                                                       Default checkbox
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                                    <input class="form-check-input" name="3" type="checkbox" value="3" id="defaultCheck3">
                                                     <label class="form-check-label" for="defaultCheck3">
                                                       Default checkbox
                                                     </label>
@@ -53,19 +54,19 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                                    <input class="form-check-input" name="4" type="checkbox" value="4" id="defaultCheck4">
                                                     <label class="form-check-label" for="defaultCheck4">
                                                       Default checkbox
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                                                    <input class="form-check-input" name="5" type="checkbox" value="5" id="defaultCheck5">
                                                     <label class="form-check-label" for="defaultCheck5">
                                                         Default checkbox
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                                                    <input class="form-check-input" name="6" type="checkbox" value="" id="defaultCheck6">
                                                     <label class="form-check-label" for="defaultCheck6">
                                                         Default checkbox
                                                     </label>

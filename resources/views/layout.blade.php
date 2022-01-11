@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>EA-Blog</title>
-        <script src="/js/jquery-3.6.0.min.js"></script>9
+        <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/app.js"></script>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -37,6 +37,13 @@
                         <li class="nav-item">
                             <a class="nav-link {{Request::routeIs('messages.index') ? 'active' : ''}}" href="{{route('messages.index')}}"><i class="fa fa-envelope-o"></i></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::routeIs('register') ? 'active' : ''}}" href="{{route('register')}}">register</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
