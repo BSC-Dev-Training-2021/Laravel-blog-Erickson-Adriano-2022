@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
-
+use App\Models\Categories;
 class PostsController extends Controller
 {
     //
@@ -24,6 +24,11 @@ class PostsController extends Controller
     	Post::create($request->all());
     	return redirect()->route('post.index')->with('success','post successfull.');
     	//dd(request()->all());
+    }
+    function show(){
+        
+        $data2 =  Categories::all();
+        return view('post',['data2'=>$data2]);
     }
     
 }

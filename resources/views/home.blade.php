@@ -10,10 +10,10 @@
                     <div class="card mb-4">
                         <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">January 1, 2021</div>
+                            <div class="small text-muted">{{$mysqldate = date('g:i a \o\n l jS F Y', strtotime($data['created_at']))}}</div>
                             <h2 class="card-title">{{ $data['title']}}</h2>
                             <p class="card-text">{{ $data['description']}}</p>
-                            <a class="btn btn-primary" href="{{route('article.show')}}">Read more →</a>
+                            <a class="btn btn-primary" href="{{ route('article.show', ['id' => $data['id']]) }}">Read more →</a>
                         </div>
                     </div>
                     @endforeach
@@ -49,8 +49,9 @@
                     <div class="card mb-4">
                         <div class="card-header">Categories</div>
                         <div class="card-body">
-                            @foreach($data2 as $cat)
-                            <div class="row">
+
+                            <div class="row">                            
+                                @foreach($data2 as $cat)
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
                                         <li><a href="#!">{{ $cat['category']}}</a></li>

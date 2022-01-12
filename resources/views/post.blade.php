@@ -32,46 +32,19 @@
                                     <div class="form-group">
                                         <label class="mb-1 mt-3">Categories</label>
                                         <div class="row">
+                                            @foreach($data2 as $data)
                                             <div class="col-lg-6">
+
                                                 <div class="form-check">
-                                                    <input class="form-check-input" name="1" type="checkbox" value="1" id="defaultCheck1">
+                                                    
+                                                    <input class="form-check-input" name="1" type="checkbox" value="{{$data['id']}}" id="defaultCheck1">
                                                     <label class="form-check-label" for="defaultCheck1">
-                                                      Default checkbox
+                                                      {{$data['category']}}
                                                     </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="2" type="checkbox" value="2" id="defaultCheck2">
-                                                    <label class="form-check-label" for="defaultCheck2">
-                                                      Default checkbox
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="3" type="checkbox" value="3" id="defaultCheck3">
-                                                    <label class="form-check-label" for="defaultCheck3">
-                                                      Default checkbox
-                                                    </label>
+                                                   
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="4" type="checkbox" value="4" id="defaultCheck4">
-                                                    <label class="form-check-label" for="defaultCheck4">
-                                                      Default checkbox
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="5" type="checkbox" value="5" id="defaultCheck5">
-                                                    <label class="form-check-label" for="defaultCheck5">
-                                                        Default checkbox
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="6" type="checkbox" value="" id="defaultCheck6">
-                                                    <label class="form-check-label" for="defaultCheck6">
-                                                        Default checkbox
-                                                    </label>
-                                                </div>
-                                            </div>
+                                             @endforeach
                                         </div>
                                     </div>
                                     
@@ -99,28 +72,26 @@
                         <div class="card-header">Categories</div>
                         <div class="card-body">
                             <div class="row">
+                                @foreach($data2 as $data)
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Web Design</a></li>
-                                        <li><a href="#!">HTML</a></li>
-                                        <li><a href="#!">Freebies</a></li>
+                                        <li><a href="#!">{{$data['category']}}</a></li>
+                                        
                                     </ul>
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
-                                    </ul>
-                                </div>
+                                @endforeach
                                 <br>
                             </div>
+                            <br>
+                            <div>
                             <form action="/c" method="post" enctype="multipart/form-data">
                                 @csrf
-                                    <label>addCategory</label>
-                                    <input type="text" name="category" class="form-control" placeholder="enter name of category">
+                                    
+                                    <input type="text" name="category" class="form-control" placeholder="add new category....">
+                                    <br>
                                     <button type="submit" class="btn btn-primary">ADD</button>
                                 </form>
+                            </div>
                         </div>
                     </div>
                     <!-- Side widget-->
